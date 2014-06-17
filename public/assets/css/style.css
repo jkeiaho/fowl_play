@@ -8,12 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 outline: 1px dotted orange;
 }
 
-*{
-	outline: 1px dotted orange;
-}
-
 body{
-<<<<<<< HEAD
 background-image: url("background2.jpg");
 font-family: 'Source Sans Pro', sans-serif;
 background-size: 400px;
@@ -38,21 +33,6 @@ padding: 1.5em;
 border-left: 1px dotted #E77400;
 border-right: 1px dotted #E77400;
 border-radius: 10px;
-=======
-	background: url(background2.jpg);
-	font-family: Helvetica;
-	background-size: 400px;
-	background-repeat: repeat;
-}
-
-.container{
-	max-width: 960px;
-	margin: 0 auto;
-	background-color: #fff;
-	padding: 1.5em;
-	border-left: 1px dotted #E77400;
-	border-right: 1px dotted #E77400;
->>>>>>> 2fe19919550fc47a3a3ca927e7c0d9a6fdaf28cc
 
 }
 
@@ -60,28 +40,18 @@ border-radius: 10px;
 
 }
 li{
-<<<<<<< HEAD
 list-style: none;
 }
 
 header a{
 float: right;
 padding: 0.5em;
-=======
-	list-style: none;
-}
-
-header a{
-	float: right;
-	padding: 0.5em;
->>>>>>> 2fe19919550fc47a3a3ca927e7c0d9a6fdaf28cc
 }
 
 
 /*---------Main Menu ---------*/
 
 nav>ul>li{
-<<<<<<< HEAD
 display: inline-block;
 position: relative;
 }
@@ -90,23 +60,12 @@ nav>ul>li>a{
 display: block;
 padding: 0.5em 1em;
 text-decoration: none;
-=======
-	display: inline-block;
-	position: relative;
-}
-
-nav>ul>li>a{
-	display: block;
-	padding: 0.5em 1em;
-	text-decoration: none;
->>>>>>> 2fe19919550fc47a3a3ca927e7c0d9a6fdaf28cc
 }
 
 
 /*---------Sub Menu ---------*/
 
 nav ul ul{
-<<<<<<< HEAD
 display: none;
 position: absolute;
 top: 100%;
@@ -126,32 +85,7 @@ transition: all 0.2s ease-out;
 nav li:hover ul{
 display: block;
 }
-=======
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 200px;
-	list-style: none;
-	padding: 0.5em; 
-}
-nav ul ul a{
-	display: block;
-	text-decoration: none;
-	padding: 0.5em 0;
-
-
-	transition: all 0.2s ease-out;
-}
-nav li:hover ul{
-	display: block;
-}
 
 .main{
 
 }
-
->>>>>>> 2fe19919550fc47a3a3ca927e7c0d9a6fdaf28cc
-
-.main{
-
