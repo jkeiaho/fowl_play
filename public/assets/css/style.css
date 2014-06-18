@@ -24,10 +24,15 @@ outline: 1px dotted orange;
     height: 0;
 }
 
+h1{
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+}
 
 body{
 background-image: url("background2.jpg");
 font-family: 'Source Sans Pro', sans-serif;
+font-weight: 300;
 background-size: 400px;
 background-repeat: repeat;
 }
@@ -47,8 +52,7 @@ max-width: 960px;
 margin: 0 auto;
 background-color: #fff;
 padding: 1.5em;
-border-left: 1px dotted #E77400;
-border-right: 1px dotted #E77400;
+border: 1px dotted #E77400;
 border-radius: 10px;
 
 }
@@ -65,14 +69,20 @@ float: right;
 padding: 0.5em;
 }
 
+.line{
+	border-bottom: 1px solid #3D9DCF;
+	width: 800px;
+	margin: 0 auto;
 
+}
 /*---------Main Menu ---------*/
 nav>ul{
 	text-align: center;
 	font-family: 'Voltaire', sans-serif;
 	font-size: 24px;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	width: 600px;
 
 }
 nav>ul>li{
@@ -101,16 +111,23 @@ nav ul ul{
 	left: 0;
 	width: 200px;
 	list-style: none;
-	padding: 0.5em;
-	text-align: left;
+	padding: 0.5em 2em;
 	margin: 0;
-	margin-left: 40px; 
+	text-align: left;
+
 
 }
+
+nav ul ul li a{
+		background-color: orange;
+		margin: .5em;
+}
+
+
 nav ul ul a{
 	display: block;
 	text-decoration: none;
-	padding: 0.5em 0;
+	padding: 0.5em 1em;
 	color: #3D9DCF;
 	font-size: 16px;
 	margin-top: 0px;
@@ -122,8 +139,25 @@ nav li:hover ul{
 	display: block;
 }
 
+
+nav>ul>li>ul>li:hover{
+	background-color: orange;
+}
+
+
+/*---------Body ---------*/
+
 .main{
 	margin-top: 100px;
+
+}
+
+.main_text{
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.5em;
+
 }
 
 .bucket{
@@ -134,12 +168,20 @@ nav li:hover ul{
 
 .cat_images{
 	float: left;
-	margin: 10px;
+	margin: 40px 10px;
 
 }
 
 .cat_images img{
 	width: 280px;
+	height: 200px;
 
+}
+
+footer p{
+	font-size: .7em;
+	font-family: inherit;
+
+	text-align: center;
 }
 
