@@ -7,7 +7,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 
 *{
-outline: 1px dotted orange;
+/* outline: 1px dotted orange; */
 
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -36,15 +36,20 @@ font-weight: 300;
 background-size: 400px;
 background-repeat: repeat;
 }
+
+
 header{
 width: 960px;
 margin: 0 auto;
+
 }
 
 header h1{
 font-family: 'Pacifico', cursive;
 text-align: center;
-font-size: 5em;
+font-size: 7em;
+color: black;
+margin: .5em;
 }
 
 .container{
@@ -66,13 +71,23 @@ list-style: none;
 
 header a{
 float: right;
-padding: 0.5em;
+margin: 0.5em;
+padding: 0 0.5em;
+font-family: 'Voltaire', sans-serif;
+text-decoration: none;
+color: black;
+}
+
+#side{
+	border-left: solid 1px black;
+	border-right: solid 1px black;
 }
 
 .line{
 	border-bottom: 1px solid #3D9DCF;
 	width: 800px;
 	margin: 0 auto;
+	margin-top: 10px;
 
 }
 /*---------Main Menu ---------*/
@@ -98,51 +113,15 @@ nav>ul>li>a{
 	padding: 0.5em 1em;
 	text-decoration: none;
 	color: #3D9DCF;
+}
 
+nav>ul>li>a:hover{
+	color: #E77400;
+	border-left: solid 1px #E77400;
+	border-right: solid 1px #E77400;
 }
 
 
-/*---------Sub Menu ---------*/
-
-nav ul ul{
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 200px;
-	list-style: none;
-	padding: 0.5em 2em;
-	margin: 0;
-	text-align: left;
-
-
-}
-
-nav ul ul li a{
-		background-color: orange;
-		margin: .5em;
-}
-
-
-nav ul ul a{
-	display: block;
-	text-decoration: none;
-	padding: 0.5em 1em;
-	color: #3D9DCF;
-	font-size: 16px;
-	margin-top: 0px;
-
-	transition: all 0.2s ease-out;
-}
-
-nav li:hover ul{
-	display: block;
-}
-
-
-nav>ul>li>ul>li:hover{
-	background-color: orange;
-}
 
 
 /*---------Body ---------*/
@@ -201,33 +180,28 @@ h4 {
 .button{
 	width:110px;
 	height: 30px;
-	background: #004700;
 	color: #fff;
 	font-weight: bold;
 	font-family: georgia;
 	font-size: 12px;
 	text-align: center;
 }
+
 input{
 	width: 30px;
 }
+
 h3 {
 	color:#004700;
 }
-h1{
-	color:#004700;
-}
+
 hr {
 	color:#006600;
 	border:1px solid;
 }
-footer{
-	background-color:#006600;
-	height: 40px;
-	color:#fff;
-	text-align: center;
-	width: 960px;
-}
+
+
+
 footer p{
 	padding-top: 10px;
 }
@@ -236,12 +210,96 @@ table td, table th{
 	border: 1px solid #ddd;
 	padding: 0.5em;
 	text-align:  left;
-	}
+}
 
 .birds{
 	 margin-left:10px;
 }	
+
 .birds tr{
  background:#fff;
+}
 
+
+
+
+/* ---------- CART ------------ */
+
+table{
+	margin: 0 auto;
+	width: 750px;
+}
+
+table th{
+	background-color: #eee;
+}
+
+input[type="submit"]{
+	margin-top: .5em;
+	width: 80px;
+}
+
+.row p, 
+input[type="submit"]{
+	display: inline-block;
+}
+
+.row p{
+	margin-left: 90px;
+}
+
+.row input[type="submit"]{
+	margin-left: 500px;
+}
+
+
+
+
+/* --------- LOGIN ----------- */
+
+.login, .register{
+	width: 380px;
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 30px;
+
+}
+
+.or{
+	display: inline-block;
+	width: 50px;
+	font-family: 'Pacifico';
+	font-size: 2.5em;
+	text-align: center;
+	position: relative;
+}
+
+.or>p{
+	position: absolute;
+	bottom: 20px;
+	color: #999;
+}
+
+.login{
+	margin-left: 50px;
+
+}
+
+.login h1{
+	color: #37A19F;
+}
+
+.register h1{
+	color: #B3669C;
+}
+
+.login input[type="text"], input[type="password"],
+.register input[type="text"], input[type="password"]{
+	width: 120px;
+	margin: 0.5em;
+}
+
+.login input[type="submit"], 
+.register input[type="submit"]{
+	margin-left: 30px;
 }
