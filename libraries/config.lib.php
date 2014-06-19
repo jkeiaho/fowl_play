@@ -1,10 +1,19 @@
 <?php
 
-# added to all models in the contruct function. 
+/*
+	
+	Config info class
 
+	usage   : Static
+	version : 1
+	author  : Nick Sheffield
+
+*/
 class Config{
+
 	public static $hostname = 'localhost';
-	public static $username = 'davidsai_cmsuser';
-	public static $password = 'cms123';
-	public static $database = 'davidsai_cms';
+	public static $username = 'jameskei_admin';
+	public static $password = 'admin123';
+	public static $database = 'jameskei_fowl_play';
+
 }

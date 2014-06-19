@@ -35,6 +35,7 @@ font-family: 'Source Sans Pro', sans-serif;
 font-weight: 300;
 background-size: 400px;
 background-repeat: repeat;
+background-attachment: fixed;
 }
 
 
@@ -59,10 +60,6 @@ background-color: #fff;
 padding: 1.5em;
 border: 1px dotted #E77400;
 border-radius: 10px;
-
-}
-
-.sidebar{
 
 }
 li{
@@ -341,6 +338,9 @@ input[type="submit"]{
 	margin-bottom: 30px;
 
 }
+.register{
+	margin-bottom: 0;
+}
 
 .or{
 	display: inline-block;
@@ -378,6 +378,11 @@ input[type="submit"]{
 
 .login input[type="submit"], 
 .register input[type="submit"]{
-	margin-left: 30px;
+	margin-left: 87px;
+}
+.login label, .register label{
+	display: inline-block;
+	width: 123px;
+	text-align: right;
 }
 

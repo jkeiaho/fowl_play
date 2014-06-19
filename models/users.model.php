@@ -8,7 +8,7 @@ class User{
 	# Properties
 
 	public $id = 0;
-	public $email = '';
+	public $username = '';
 	public $password = '';
 
 	private $db;
@@ -36,13 +36,13 @@ class User{
 
 	public function load($id){
 		$result = $this->db
-			->select('id, email, password')
-			->from('tb_users')
+			->select('id, username, password')
+			->from('tb_customers')
 			->where('id', $id)
 			->get_one();
 
 		$this->id       = $id;
-		$this->email    = $result['email'];
+		$this->username = $result['username'];
 		$this->password = $result['password'];
 	}
 
@@ -51,11 +51,11 @@ class User{
 
 			$success = $this->db
 				->set(array(
-					'email'    => $this->email,
+					'username' => $this->username,
 					'password' => Hash::make_password($this->password), # encrypts password before inserting into the db.
 					'salt'	   => Hash::salt()
 				))
-				->insert('tb_users');
+				->insert('tb_customers');
 
 
 			$this->id = $this->db->last_insert_id;
@@ -63,12 +63,12 @@ class User{
 		}else{
 			$success = $this->db
 				->set(array(
-					'email'    => $this->email,
+					'username' => $this->username,
 					'password' => Hash::make_password($this->password), # encrypts password before inserting into the db.
 					'salt'	   => Hash::salt()
 				))
 				->where('id', $this->id)
-				->update('tb_users');
+				->update('tb_customers');
 		}
 		return $success;
 	}
@@ -77,8 +77,8 @@ class User{
 
 		$user = $this->db
 			->select('salt')
-			->from('tb_users')
-			->where('email', $this->email)      # Find out what the salt is using the email address.
+			->from('tb_customers')
+			->where('username', $this->username)      # Find out what the salt is using the username address.
 			->get_one();
 
 		$encrypted_pw = Hash::encrypt(
@@ -88,7 +88,7 @@ class User{
 
 		$result = $this->db
 			->select('id')
-			->from('tb_users')
+			->from('tb_customers')
 			->where('password', $encrypted_pw) #
 			->get_one();
 
