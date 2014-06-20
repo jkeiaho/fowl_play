@@ -1,0 +1,107 @@
+<?php include ('../views/header.php') ; ?>
+
+<div class="main">
+    <h1>Bird of Pray</h1>
+    <form action="add_to_cart.php">
+   	<div class="box">
+   		<h4>Eagle</h4>
+   			<p>Diet: Carnivores: Reptiles, small mammals, fish, small birds and sometimes carrion are all part of the eagle's diet</p>
+   			<img src="assets/images/birds_of_prey/eagle_2.jpg" alt="Eagle" />
+   		<h4 class="price">Price $500.00</h4>	
+          <input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+     </div>
+     <div class="box">
+   		<h4>Hawk</h4>
+   			<p>Eagles are different from many other birds of prey mainly by their larger size, more powerful build, and heavier head and beak. </p> 
+   			<img src="assets/images/birds_of_prey/hawk_2.jpg" alt="Hawk" />
+   			<h4 class="price">Price $800.00</h4>
+   				<input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+     </div>
+     <div class="box"> 
+     	<h4>Falcon</h4>
+   			<p>A single variable species divided into three forms: bush falcon, largest and lightest, from eastern and central South Island.</p> 
+   			<img src="assets/images/birds_of_prey/falcon_2.jpg" alt="Falcon" />
+   			<h4 class="price">Price $1,500.00</h4>
+   				<input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+          
+     </div>
+		<br><br><br>
+        <h1>Exotic Birds</h1>
+     <div class="box">
+   		<h4>Kingfisher Bird</h4>
+   			<p>Sacred Kingfisher. Adult. Boulder Bank Nelson, June 2008. Most species are tropical in distribution.</p> 
+
+   			<img src="assets/images/exotic_birds/bird_kingfisher.jpg" alt="Kingfisher" />
+
+   			<h4 class="price">Price $1,800.00</h4>
+   				<input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+     </div>
+     <div class="box">
+   		<h4>Peacock Bird</h4>
+   			<p>One of the most ostentaiously adorned creatures on Earth, the peacock uses its brilliant pluage to entice females.</p> 
+
+   			<img src="assets/images/exotic_birds/bird_peacock.jpg" alt="Pheasant" />
+
+   			<h4 class="price">Price $1,900.00</h4>
+   				<input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+     </div>
+     <div class="box">
+   		<h4>Pheasant Bird</h4>
+   			<p>More commonly found on the ground, ring-necked pheasants can take rapidly to the air when startled.</p> 
+
+   			<img src="assets/images/exotic_birds/golden_pheasant.jpg" alt="Pheasant" />
+
+   			<h4 class="price">Price $1,900.00</h4>
+   				<input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+     </div>
+
+     <h1>Native Birds</h1>
+   	<div class="box box1">
+   		<h4>Kiwi Bird</h4>
+   			<p>All kiwi species are threatened with extinction, but to varying degrees.  due to their small population size and limited number of populations. They are the simbol of NZ.</p>
+   		
+   			<img src="assets/images/bird_kiwi.jpg" alt="Kiwi" />
+
+   		<h4 class="price">Price $2,000.00</h4>	
+          <input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+     </div>
+     <div class="box box1">
+   		<h4>Tui Bird</h4>
+   			<p>Tūī are common throughout New Zealand in forests, towns and on off-shore islands. They are adaptable and are found not only in native forests, bush reserves and bush remnants. </p> 
+
+   			<img src="assets/images/bird_tui.jpg" alt="Tui Bir" />
+
+   			<h4 class="price">Price $1,800.00</h4>
+   				<input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+     </div>
+     <div class="box box1">
+   		<h4>Pukeko Bird</h4>
+   			<p>Pūkeko are probably one of the most recognised native birds in New Zealand with its distinctive colourings and habit of feeding on the ground. It is found all over New Zealand.</p> 
+
+   			<img src="assets/images/bird_pukeko.jpg" alt"Pukeko" />
+
+   			<h4class="price">Price $1,600.00</h4>
+   				<input type="hidden" name="id" value="1" ><strong class="qty">Qty</strong>
+          <input type="number" name="quantity" min="1" />&nbsp;&nbsp;
+          <input type="submit" value="Add to Cart" class="button">
+         </div>                       
+      </form>
+  </div>
+
+  <?php include ('../views/footer.php') ; ?>

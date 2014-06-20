@@ -2,13 +2,14 @@
 
 require_once '../libraries/config.class.php';
 
-class Subject{
+class Category{
 
 	# Properties -----------------------------------
 
 	public $id 		= 0;
 	public $name 	= '';
 	public $deleted = 0;
+	public $table   = 'tb_category';
 	private $db 	= null;
 
 	# Magic methods --------------------------------
@@ -32,7 +33,7 @@ class Subject{
 		if($id){
 			$result = $this->db
 				->select('id, name, deleted')
-				->from('tb_subjects')
+				->from($this->table)
 				->where('id', $id)
 				->get_one();
 
@@ -53,7 +54,7 @@ class Subject{
 					'name'		=> $this->name,
 					'deleted'	=> $this->deleted
 				))
-				->insert('tb_subjects');
+				->insert($this->table);
 		}else{
 			$this->db
 			->set(array(
@@ -61,7 +62,7 @@ class Subject{
 				'deleted' => $this->deleted
 			))
 			->where('id', $this->id)
-			->update('tb_subjects');
+			->update($this->table);
 		}
 	}
 

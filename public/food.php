@@ -1,4 +1,6 @@
-   <div class="main">
+<?php include ('../views/header.php') ; ?>
+
+<div class="main">
        <h1>Seeds</h1>       	
         <div class="box box3">
           <h4>Aviflax</h4>
@@ -71,7 +73,6 @@
 		</div>
       </form>
         
-    </div>  
- 
-</body>
-</html>
+    </div> 
+
+    <?php include ('../views/footer.php') ; ?> 

@@ -1,50 +1,34 @@
-<?php include ('../views/header.php') ; ?>
-   	
-   	<div class="main">
-	    <h1>Checkout</h1>
-	    <div class="cart_table clearfix">
-		    <table class="cart">
-		    	<tr>
-		    		<th>Image</th>
-		    		<th>Name</th>
-		    		<th>Price</th>
-		    		<th>Quantity</th>
-		    		<th>Total Price</th>
-		    		<th></th>
-		    	</tr>
-		    	<tr>
-		    		<td>Image1</td>
-		    		<td>Name</td>
-		    		<td>Price</td>
-		    		<td>Quantity</td>
-		    		<td>Total Price</td>
-		    		<td>Remove</td>
-		    	</tr>
-		    	<tr>
-		    		<td>Image2</td>
-		    		<td>Name</td>
-		    		<td>Price</td>
-		    		<td>Quantity</td>
-		    		<td>Total Price</td>
-		    		<td>Remove</td>
-		    	</tr>
-		    	<tr>
-		    		<td>Image3</td>
-		    		<td>Name</td>
-		    		<td>Price</td>
-		    		<td>Quantity</td>
-		    		<td>Total Price</td>
-		    		<td>Remove</td>
-		    	</tr>
-		    </table>
+<?php
 
-	     </div>
+require_once '../libraries/database.lib.php';
+require_once '../libraries/config.lib.php';
+require_once '../libraries/form.lib.php';
+require_once '../libraries/model.lib.php';
+require_once '../libraries/cart.lib.php';
+require_once '../models/category.collection.php';
 
-	    <div class="row">
-	    <p>Grand Total: $000:00</p>
-	    <input type="submit" value="Buy">
-		</div>
+$cart_products = array();
+$grand_total = 0;
+Cart::create_cart();
 
-	</div>
+foreach($_SESSION['cart'] as $id =>$qty){
+	$product = new Model('tb_products');
 
-<?php include ('../views/footer.php') ; ?>
+	$product->load($id);
+	$total_price = $qty * $product->price;
+	$grand_total += $total_price;
+
+	$cart_product[] = array(
+		'image'       => $product->image,
+		'description' => $product->description,
+		'total_price' => $total_price,
+		'price'       => $product->price,
+		'quantity'    => $qty,
+		'name'    	  => $product->name,
+		'id'    	  => $product->id
+	);
+}
+
+include '../views/header.php';
+include '../views/cart_table.php';
+include '../views/footer.php';
