@@ -7,7 +7,7 @@ class Product_Collection{
 	public $items = array();
 	private $db;
 
-	public function __construct(){
+	public function __construct($id = false){
 		$this->db = new Database(
 			Config::$hostname,
 			Config::$username,
@@ -15,9 +15,12 @@ class Product_Collection{
 			Config::$database
 		);
 
-		$this->items = $this->db
-			->select('*')
-			->from('tb_products')
-			->get();
+		$this->db->select('*')->from('tb_products');
+
+		if($id){
+			$this->db->where('category_id', $id);
+		}
+			
+		$this->items = $this->db->get();
 	}
 }

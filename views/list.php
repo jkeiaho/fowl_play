@@ -1,8 +1,8 @@
 <div class="main">
 	<? foreach($products->items as $product): ?>
 		<div class="product">
-			<img src="<?=$product['image']?>" alt="<?=$product['name']?>">
 			<h2><?=$product['name']?></h2>
+			<img src="<?=$product['image']?>" alt="<?=$product['name']?>"><br>
 			<?=$product['description']?>
 
 			<p class="price">$<?=$product['price']?></p>
