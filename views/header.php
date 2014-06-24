@@ -25,6 +25,7 @@
         <li><a href="products.php?id=2">Cages</a> </li>      
         <li><a href="products.php?id=3">Food</a> </li>      
        </ul>
+       <div class="line"></div> 
      </nav>
 
 
