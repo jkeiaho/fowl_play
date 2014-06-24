@@ -1,7 +1,7 @@
 <?php
 
-require_once '../libraries/config.class.php';
-require_once '../libraries/hash.class.php';
+require_once '../libraries/config.lib.php';
+require_once '../libraries/hash.lib.php';
 
 class User{
 

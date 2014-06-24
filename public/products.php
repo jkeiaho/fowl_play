@@ -6,6 +6,8 @@ require_once '../libraries/form.lib.php';
 require_once '../libraries/model.lib.php';
 require_once '../libraries/cart.lib.php';
 require_once '../models/product.collection.php';
+require_once '../libraries/login.lib.php';
+
 
 $products = new Product_Collection($_GET['id']);
 

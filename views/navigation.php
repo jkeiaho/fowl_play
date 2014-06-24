@@ -1,4 +1,4 @@
-<?php $category = new Category_collection(); ?>
+<?php $products = new Product_collection(); ?>
 <nav>
     <ul>
         <?php foreach($category->items as $nav_category): ?>

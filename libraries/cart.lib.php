@@ -47,4 +47,8 @@ class Cart{
 		$_SESSION['cart'][$id] = intval($qty);
 	}
 
+	public function clear(){
+		$_SESSION['cart'] = array();
+	}
+
 }
