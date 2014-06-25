@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once '../libraries/database.lib.php';
 require_once '../libraries/config.lib.php';
 require_once '../libraries/form.lib.php';
@@ -29,10 +31,8 @@ if($_SESSION['logged_in'] == true){
 			'name'    	  => $product->name,
 			'id'    	  => $product->id
 		);
-	}
-	
-}else{
-	Cart::clear();
+	}	
+
 }
 
 include '../views/header.php';

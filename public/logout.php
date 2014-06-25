@@ -1,6 +1,6 @@
 <?php
 
-//require_once '../libraries/login.lib.php';
+require_once '../libraries/cart.lib.php';
 
 //Login::log_out();
 
@@ -14,5 +14,7 @@ session_start();
 
 unset($_SESSION['logged_in']);
 
-header('location: login.php');
+Cart::clear($product_id, $quantity);
+
+header('location: index.php');
 exit;

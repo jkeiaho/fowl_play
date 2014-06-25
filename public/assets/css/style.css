@@ -451,3 +451,26 @@ table td, table th{
 table th{
 	background: #eee;
 }
+
+.buttons{
+	float:right;
+}
+
+.buttoncheck{
+	float:right;
+	text-decoration: none;
+	display: inline-block;
+	height: 40px;
+	width: 150px;
+	border-radius: 5px;
+	background:#FF9900;
+	color:black;
+	font-size: georgia;
+	text-align: center;
+	padding-top: 10px;
+
+}
+.msg{
+	text-align: center;
+	color:#CC0066;
+}

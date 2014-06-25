@@ -8,18 +8,25 @@ require_once '../libraries/login.lib.php';
 require_once '../models/users.model.php';
 
 
-if($_POST && $_POST['password'] == $_POST['confirm_password']){
-	$user = new User();
+if($_POST){
 
-	$user->username = $_POST['username'];
-	$user->password = $_POST['password'];
+ 	if($_POST['password'] == $_POST['confirm_password']){
+		$user = new User();
 
-	if($user->save()){
+		$user->username = $_POST['username'];
+		$user->password = $_POST['password'];
 
-		header('location: index.php');
-		exit;
+		if($user->save()){
+			header('location: login.php');
+			exit;
 		}
+	}else{
+		$error = 'Passwords do not match';
+	}
+
 }
+
+
 
 
 include '../views/header.php';

@@ -34,4 +34,8 @@
 	</table>
 
 	<p class="total">Grand Total: $<?=$grand_total?></p>
+
+	<div class="buttoncheck">
+		<a href="checkout.php">Checkout</a>
+	</div>
 </div>
