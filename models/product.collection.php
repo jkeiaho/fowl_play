@@ -15,10 +15,10 @@ class Product_Collection{
 			Config::$database
 		);
 
-		$this->db->select('*')->from('tb_products');
+		$this->db->select('*')->from('tb_products')->where('deleted', '0');
 
 		if($id){
-			$this->db->where('category_id', $id);
+			$this->db->where_and('category_id', $id);
 		}
 			
 		$this->items = $this->db->get();

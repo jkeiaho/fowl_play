@@ -14,7 +14,7 @@
           <? else: ?>
           <a href="login.php">Login</a>
         <? endif; ?>
-   <a href="index.php">Home</a>
+   <a href="admin.php">Home</a>
  </header>
 <div class="container clearfix">
   <nav>
