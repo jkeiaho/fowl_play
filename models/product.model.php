@@ -11,6 +11,7 @@ class Product{
 	public $description = '';
 	public $category_id = '';
 	public $price 		= '';
+	public $image       = '';
 	private $db        	= null;
 
 	# Magic Methods -------------------------------------------------------------------------------------
@@ -25,7 +26,7 @@ class Product{
 
 		if($id){
 			$result = $this->db
-				->select('id, name, description, category_id, price, deleted')
+				->select('id, name, description, category_id, price, image, deleted')
 				->from('tb_products')
 				->where('id', $id)
 				->get_one();
@@ -35,6 +36,7 @@ class Product{
 				$this->description  = $result['description'];
 				$this->category_id 	= $result['category_id'];
 				$this->price 		= $result['price'];
+				$this->image 		= $result['image'];
 				$this->deleted    	= $result['deleted'];
 		}
 	}
@@ -50,6 +52,7 @@ class Product{
 						'description'   => $this->description,
 						'category_id' 	=> $this->category_id,
 						'price' 		=> $this->price,
+						'image' 		=> $this->image,
 						'deleted'    	=> $this->deleted
 					))
 					->insert('tb_products');
@@ -61,6 +64,7 @@ class Product{
 						'description'   => $this->description,
 						'category_id' 	=> $this->category_id,
 						'price' 		=> $this->price,
+						'image' 		=> $this->image,
 						'deleted'    	=> $this->deleted
 				   	))
 				     ->where('id', $this->id)

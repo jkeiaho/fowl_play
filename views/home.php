@@ -6,16 +6,17 @@
 		
 		<div class="bucket clearfix">
 		     <div class="cat_images">
-		         <a href="#"><img src="assets/images/bird_feed.png" alt=""></a>
+		         <a href="products.php?id=1"><img src="assets/images/bird_types.png" alt=""></a>
 		     </div>
 		     <div class="cat_images">
-		       <a href="#"><img src="assets/images/bird_house.png" alt=""></a>
+		       <a href="products.php?id=2"><img src="assets/images/bird_house.png" alt=""></a>
 		     </div>
 		     <div class="cat_images">
-		       <a href="#"><img src="assets/images/bird_types.png" alt=""></a>
+		       <a href="products.php?id=3"><img src="assets/images/bird_feed.png" alt=""></a>
 		     </div>
 	     </div>
 	</div>
+
 
 
 

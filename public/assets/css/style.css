@@ -7,7 +7,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 
 *{
-/* outline: 1px dotted orange; */
+/*outline: 1px dotted orange; */
 
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -89,6 +89,12 @@ color: black;
 
 }
 /*---------Main Menu ---------*/
+
+nav{
+	text-align: center;
+	margin-top: 30px;
+}
+
 nav>ul{
 	text-align: center;
 	font-family: 'Voltaire', sans-serif;
@@ -103,10 +109,12 @@ nav>ul>li{
 	position: relative;
 	padding: 0 30px;
 	margin: 0;
+	text-align: center;
 
 }
 
 nav>ul>li>a{
+	text-align: center;
 	display: block;
 	padding: 0.5em 1em;
 	text-decoration: none;
@@ -125,7 +133,7 @@ nav>ul>li>a:hover{
 /*---------Body ---------*/
 
 .main{
-	margin-top: 100px;
+	margin-top: 40px;
 
 }
 
@@ -161,6 +169,13 @@ footer p{
 
 	text-align: center;
 }
+footer>a{
+	font-size: 0.8em;
+	margin-left: 415px;
+	text-decoration: none;
+	color: #999;
+}
+
 
 /*me norma*/
 
@@ -246,7 +261,7 @@ input{
 }
 .box1 img{
 	margin-left: 25px;
-	 box-shadow: 10px 10px 5px #888888;
+	box-shadow: 10px 10px 5px #888888;
 }
 .box1 h4{
 	text-align: center;
@@ -332,32 +347,6 @@ input[type="submit"]{
 
 /* --------- LOGIN ----------- */
 
-.login, .register{
-	width: 380px;
-	display: inline-block;
-	text-align: center;
-	margin-bottom: 30px;
-
-}
-.register{
-	margin-bottom: 0;
-}
-
-.or{
-	display: inline-block;
-	width: 50px;
-	font-family: 'Pacifico';
-	font-size: 2.5em;
-	text-align: center;
-	position: relative;
-}
-
-.or>p{
-	position: absolute;
-	bottom: 20px;
-	color: #999;
-}
-
 .login{
 	margin-left: 50px;
 
@@ -386,17 +375,21 @@ input[type="submit"]{
 	width: 123px;
 	text-align: right;
 }
+.product h2{
+	margin-top: -10px;
+}
 
 .product{
 	width: 280px;
-	height: 450px;
+	height: 550px;
 	margin: 0 1em;
 	padding: 1em;
 	float: left;
 	border: 1px solid #ddd;
 }
-product img{
-	float:left;
+
+.product img{
+	display:inline-block;
 	max-width: 250px;
 	box-shadow: 10px 10px 5px #888888;
 	text-align: center;
@@ -407,6 +400,13 @@ product img{
 	color: #001400;
 	font-size: 14px;
 	margin-top: 20px;
+}
+
+.product label{
+	display: inline-block;
+	width: 10px;
+	text-align: center;
+
 }
 
 
@@ -423,10 +423,10 @@ product img{
 	padding: 1em;
 	background: #eee;
 	border: 1px solid #ddd;
+	margin-bottom: -10px;
 }
 
-input[type=number]
-{
+input[type=number]{
 	width: 60px;
 }
 

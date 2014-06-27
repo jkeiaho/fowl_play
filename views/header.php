@@ -18,8 +18,9 @@
    <a href="index.php">Home</a>
    <a href="register.php">Register</a>
  </header>
+
 <div class="container clearfix">
-  <nav>
+  <nav class="navi">
        <ul>
         <li><a href="products.php?id=1">Birds</a> </li>
         <li><a href="products.php?id=2">Cages</a> </li>      

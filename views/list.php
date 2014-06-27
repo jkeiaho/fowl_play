@@ -1,11 +1,11 @@
-<div class="main">
+<div class="main clearfix">
 	<? foreach($products->items as $product): ?>
-		<div class="product">
+		<div class="product clearfix">
 			<h2><?=$product['name']?></h2>
 			<img src="<?=$product['image']?>" alt="<?=$product['name']?>"><br>
 			<?=$product['description']?>
 
-			<p class="price">$<?=$product['price']?></p>
+			<p class="price clearfix">$<?=$product['price']?></p>
 
 			<?=Form::open('add_to_cart.php')?>
 				<?=Form::hidden('id', $product['id'])?>

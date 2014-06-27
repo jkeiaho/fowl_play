@@ -1,10 +1,10 @@
 <div class="main">
 	
-	<?=Form::open()?>
+	<?=Form::open_upload()?>
 
 	
 		<?=Form::label('file','File:')?>
-		<?=Form::input('file','file[]','multiple')?>
+		<?=Form::file()?>
 			
 		
 		<?=Form::label('name', 'Product Name:')?>

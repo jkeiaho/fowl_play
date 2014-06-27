@@ -20,25 +20,37 @@ if($_POST){
 	$product->name 			= $_POST['name'];
 	$product->description 	= $_POST['description'];
 	$product->price 		= $_POST['price'];
-	$product->category_id 	= $_GET['category_id'];
+	$product->category_id 	= $_POST['category_id'];
 
-	$product->save();
-}
-
-$images = '';
+	$images = '';
 
 	#( $_FILES );  #Super Global
 
 	# If any files were uploaded
 	if($_FILES){
 
-		$uploaded_files = Upload::multiple_to_folder('uploads/');
+		$uploaded_files = Upload::to_folder('assets/images/');
 
-	foreach($uploaded_files as $file){
-		$images .= "<a href='$file'><img src='$file' height='100'></a>";
+		foreach($uploaded_files as $file){
+
+			if($file['error_message']){
+				echo $file['error_message'];
+			}else{
+				$product->image = $file['filepath'];
+			}
+		}
+			
 	}
-		
+
+	$product->save();
+	
+
+	header('location: edit_products.php?id='.$_POST['category_id']);
+	exit;
 }
+
+
+
 
 
 include '../views/admin_header.php';
